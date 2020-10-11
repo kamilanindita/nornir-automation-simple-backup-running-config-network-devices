@@ -1,0 +1,36 @@
+2020-10-11 12:23:32,012 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'config']} on 3 hosts
+2020-10-11 12:23:47,225 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/napalm/eos/eos.py", line 1744, in get_config
+    output = self.device.run_commands(commands, encoding="text")
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/eapilib.py", line 469, in send
+    raise CommandError(code, msg, command_error=err, output=out)
+pyeapi.eapilib.CommandError: Error [1000]: CLI command 2 of 3 'show startup-config' failed: could not run command [Error displaying flash:/startup-config (No such file or directory)]
+
+2020-10-11 12:25:55,158 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'config']} on 3 hosts
+2020-10-11 12:26:08,686 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_get' failed with traceback:
+Traceback (most recent call last):
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/nornir/core/task.py", line 85, in start
+    r = self.task(self, **self.params)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/nornir/plugins/tasks/networking/napalm_get.py", line 61, in napalm_get
+    result[g] = method(**options)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/napalm/eos/eos.py", line 1744, in get_config
+    output = self.device.run_commands(commands, encoding="text")
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/client.py", line 743, in run_commands
+    response = self._connection.execute(commands, encoding, **kwargs)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/eapilib.py", line 550, in execute
+    response = self.send(request)
+  File "/root/deploy/nornir_automation/lib/python3.6/site-packages/pyeapi/eapilib.py", line 469, in send
+    raise CommandError(code, msg, command_error=err, output=out)
+pyeapi.eapilib.CommandError: Error [1000]: CLI command 2 of 3 'show startup-config' failed: could not run command [Error displaying flash:/startup-config (No such file or directory)]
+
+2020-10-11 12:38:36,308 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'config']} on 3 hosts
+2020-10-11 12:39:28,215 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'config']} on 3 hosts

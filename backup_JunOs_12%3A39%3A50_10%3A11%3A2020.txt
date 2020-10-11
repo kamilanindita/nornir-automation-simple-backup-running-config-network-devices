@@ -1,0 +1,33 @@
+
+## Last commit: 2020-10-11 11:53:49 UTC by root
+version 17.1R1.8;
+system {
+    host-name JunOs;
+    root-authentication {
+        encrypted-password "$6$bVvUZNXl$K4XZduo5ow19.FXpSHnF8CpYvrTmKTqSgbGpRujlTq5e4jmT/Vd0XjLx1VKjt.gB7UJZW3/BBIlLMm/2ZHTe1.";
+    }
+    services {
+        ssh;
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+interfaces {
+    fxp0 {
+        unit 0 {
+            family inet {
+                address 192.168.100.102/24;
+            }
+        }
+    }
+}

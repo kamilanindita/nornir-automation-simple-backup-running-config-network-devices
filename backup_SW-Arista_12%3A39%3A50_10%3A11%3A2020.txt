@@ -1,0 +1,50 @@
+! Command: show running-config
+! device: SW-Arista (vEOS, EOS-4.25.0FX-LDP-RSVP)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
+!
+hostname SW-Arista
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$.qNY5ZLWHOAMkuYL$M5KbDkICYjFGVlZgpCtiyyIdrSaMUO6lCOxGdQUBu18AOUGYcO7fg3iDw4Vt0wi9t81B/pGL3PEZHyYyizrIe.
+!
+interface Ethernet1
+!
+interface Ethernet2
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Management1
+   ip address 192.168.100.103/24
+!
+no ip routing
+!
+management api http-commands
+   no shutdown
+!
+end
